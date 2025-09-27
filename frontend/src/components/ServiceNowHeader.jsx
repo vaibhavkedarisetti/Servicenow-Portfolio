@@ -28,12 +28,15 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
           </div>
         </button>
         
-        <div className="flex items-center gap-2">
+        <button 
+          onClick={() => window.location.href = '/'}
+          className="flex items-center gap-2 hover:bg-white/10 p-2 rounded"
+        >
           <div className="bg-white text-[#1a4d72] px-2 py-1 rounded text-sm font-bold">
             ServiceNow
           </div>
           <span className="text-sm">⭐</span>
-        </div>
+        </button>
       </div>
 
       {/* Main Navigation */}
