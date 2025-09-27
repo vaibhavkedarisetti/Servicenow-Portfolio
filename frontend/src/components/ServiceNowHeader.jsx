@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
 import { Search, Settings, Bell, MessageCircle, User, ChevronDown } from 'lucide-react';
 import { personalInfo } from '../data/mockData';
 
@@ -29,8 +28,8 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
           </div>
         </button>
         
-        <Link 
-          to="/"
+        <button 
+          onClick={() => window.location.reload()}
           className="flex items-center gap-1 sm:gap-2 hover:bg-white/10 p-1 sm:p-2 rounded"
         >
           <img 
@@ -38,7 +37,7 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
             alt="Logo" 
             className="h-6 sm:h-8 w-auto object-contain"
           />
-        </Link>
+        </button>
       </div>
 
       {/* Main Navigation - Hidden on mobile */}
