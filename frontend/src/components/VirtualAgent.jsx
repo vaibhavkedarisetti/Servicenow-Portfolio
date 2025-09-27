@@ -86,47 +86,47 @@ const VirtualAgent = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 w-96 h-[500px] bg-white border border-gray-200 rounded-lg shadow-2xl z-50 flex flex-col">
+    <div className="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 w-[calc(100vw-0.5rem)] sm:w-96 h-[calc(100vh-1rem)] sm:h-[500px] bg-white border border-gray-200 rounded-lg shadow-2xl z-50 flex flex-col">
       {/* Header */}
-      <div className="bg-[#1a4d72] text-white p-4 rounded-t-lg flex items-center justify-between">
-        <div className="flex items-center gap-2">
-          <Bot className="w-5 h-5" />
-          <span className="font-medium">Magic Vaibhav's Virtual Agent</span>
+      <div className="bg-[#1a4d72] text-white p-2 sm:p-4 rounded-t-lg flex items-center justify-between">
+        <div className="flex items-center gap-1 sm:gap-2">
+          <Bot className="w-4 h-4 sm:w-5 sm:h-5" />
+          <span className="font-medium text-sm sm:text-base truncate">Magic Vaibhav's Virtual Agent</span>
         </div>
         <button 
           onClick={onClose}
-          className="hover:bg-white/10 p-1 rounded"
+          className="hover:bg-white/10 p-1 rounded flex-shrink-0"
         >
           <X className="w-4 h-4" />
         </button>
       </div>
 
       {/* Messages */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div className="flex-1 overflow-y-auto p-2 sm:p-4 space-y-2 sm:space-y-4">
         {messages.map((message) => (
           <div
             key={message.id}
-            className={`flex gap-3 ${message.type === 'user' ? 'flex-row-reverse' : ''}`}
+            className={`flex gap-2 sm:gap-3 ${message.type === 'user' ? 'flex-row-reverse' : ''}`}
           >
-            <div className={`w-8 h-8 rounded-full flex items-center justify-center ${
+            <div className={`w-6 h-6 sm:w-8 sm:h-8 rounded-full flex items-center justify-center flex-shrink-0 ${
               message.type === 'bot' ? 'bg-[#1a4d72] text-white' : 'bg-gray-200'
             }`}>
-              {message.type === 'bot' ? <Bot className="w-4 h-4" /> : <User className="w-4 h-4" />}
+              {message.type === 'bot' ? <Bot className="w-3 h-3 sm:w-4 sm:h-4" /> : <User className="w-3 h-3 sm:w-4 sm:h-4" />}
             </div>
             
             <div className={`max-w-[75%] ${message.type === 'user' ? 'text-right' : ''}`}>
-              <div className={`p-3 rounded-lg ${
+              <div className={`p-2 sm:p-3 rounded-lg ${
                 message.type === 'bot' 
                   ? 'bg-gray-100 text-gray-800' 
                   : 'bg-[#1a4d72] text-white'
               }`}>
-                <p className="text-sm">{message.content}</p>
+                <p className="text-xs sm:text-sm">{message.content}</p>
                 
                 {/* Options */}
                 {message.options && (
-                  <div className="mt-2 space-y-1">
+                  <div className="mt-1 sm:mt-2 space-y-1">
                     {message.options.map((option, idx) => (
-                      <div key={idx} className="text-xs bg-white/10 p-2 rounded font-mono">
+                      <div key={idx} className="text-xs bg-white/10 p-1 sm:p-2 rounded font-mono">
                         {option}
                       </div>
                     ))}
@@ -135,9 +135,9 @@ const VirtualAgent = ({ isOpen, onClose }) => {
 
                 {/* Data */}
                 {message.data && (
-                  <div className="mt-2 space-y-2">
+                  <div className="mt-1 sm:mt-2 space-y-1 sm:space-y-2">
                     {message.data.map((item, idx) => (
-                      <div key={idx} className="text-xs bg-white/10 p-2 rounded">
+                      <div key={idx} className="text-xs bg-white/10 p-1 sm:p-2 rounded">
                         <div className="font-semibold">{item.name || item.company || item.institution}</div>
                         <div className="text-white/80">{item.role || item.degree || item.issuer}</div>
                         {item.period && <div className="text-white/60">{item.period}</div>}
@@ -155,20 +155,20 @@ const VirtualAgent = ({ isOpen, onClose }) => {
       </div>
 
       {/* Input */}
-      <form onSubmit={handleSendMessage} className="p-4 border-t">
-        <div className="flex gap-2">
+      <form onSubmit={handleSendMessage} className="p-2 sm:p-4 border-t">
+        <div className="flex gap-1 sm:gap-2">
           <input
             type="text"
             value={inputValue}
             onChange={(e) => setInputValue(e.target.value)}
             placeholder="Type your message..."
-            className="flex-1 p-2 border border-gray-300 rounded focus:outline-none focus:border-[#1a4d72]"
+            className="flex-1 p-1 sm:p-2 border border-gray-300 rounded focus:outline-none focus:border-[#1a4d72] text-sm sm:text-base"
           />
           <button
             type="submit"
-            className="bg-[#1a4d72] text-white p-2 rounded hover:bg-[#0f3a5f] transition-colors"
+            className="bg-[#1a4d72] text-white p-1 sm:p-2 rounded hover:bg-[#0f3a5f] transition-colors flex-shrink-0"
           >
-            <Send className="w-4 h-4" />
+            <Send className="w-3 h-3 sm:w-4 sm:h-4" />
           </button>
         </div>
       </form>

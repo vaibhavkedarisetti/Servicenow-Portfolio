@@ -6,9 +6,9 @@ export const personalInfo = {
   email: "vaibhavkedarisetti1@gmail.com",
   phone: "+919347130705",
   linkedin: "https://linkedin.com/in/vaibhav-kedarisetti",
-  github: "https://github.com/vaibhav-kedarisetti",
+  github: "https://github.com/M10O",
   resumeLink: "https://drive.google.com/file/d/1UmlOs27ACEeXPFLCCAfDrRxgbAs4evmG/view?usp=sharing",
-  profileImage: "https://customer-assets.emergentagent.com/job_2e3c90ea-dd83-4011-b0a3-1f694251ffb9/artifacts/avkllnwl_Generated%20Image%20September%2022%2C%202025%20-%201_48PM.png",
+  profileImage: "/vaibhav-profile.png",
   summary: "ServiceNow Developer with hands-on experience across ITSM, HRSD, and CSM modules. 5x certified (CAD, CSA, CIS-CSM, CIS-ITSM, CIS-HRSD) with expertise in scripting, integrations, and GenAI use cases. Skilled in building custom applications, workflows, and AI-powered solutions that enhance customer service operations and demo experiences."
 };
 
@@ -18,7 +18,7 @@ export const experience = [
     company: "HCL Tech",
     role: "Graduate Engineer Trainee - ServiceNow",
     location: "Chennai, India",
-    period: "Jul 2024 – Aug 2025",
+    period: "Oct 2024 – Aug 2025",
     status: "Active",
     details: [
       "Actively engaged in both testing and development tasks within the PayPal project, ensuring timely and efficient delivery of features and functionality.",
@@ -48,6 +48,18 @@ export const experience = [
       "Designed user-friendly interfaces and a comprehensive admin panel for managing content, bookings, and user data.",
       "Integrated RESTful APIs for creating and managing tour packages, storing data securely in MongoDB.",
       "Implemented core features such as Gallery, Packages, Sightseeing, User Profile, and Booking modules to enhance user experience and engagement."
+    ]
+  },
+  {
+    id: "EXP003",
+    company: "Benciti Technologies",
+    role: "SDE Intern",
+    location: "Hyderabad, India",
+    period: "May 2022 - July 2022",
+    status: "Completed",
+    details: [
+      "Developing & Testing of an android application called nudge math",
+      "Techstack: ReactJS, HTML, CSS, JS, Git"
     ]
   }
 ];
@@ -236,34 +248,24 @@ export const virtualAgentResponses = {
 // Navigation menu items
 export const navigationItems = [
   {
-    category: "Self-Service",
-    items: [
-      { name: "Dashboard", table: "sys_dashboard", icon: "LayoutDashboard" },
-      { name: "My Profile", table: "sys_user_profile", icon: "User" }
-    ]
-  },
-  {
     category: "Portfolio Management",
     items: [
       { name: "Work Experience", table: "u_experience", icon: "Briefcase" },
-      { name: "Projects Built", table: "u_projects_built", icon: "FolderOpen" },
-      { name: "My Connected Apps", table: "u_projects_built", icon: "Link" }
+      { name: "Projects Built", table: "u_projects_built", icon: "FolderOpen" }
     ]
   },
   {
     category: "Education & Credentials", 
     items: [
       { name: "Education", table: "u_education", icon: "GraduationCap" },
-      { name: "Certifications", table: "u_certifications", icon: "Award" },
-      { name: "ServiceNow Skills", table: "u_snow_skills", icon: "Code" },
-      { name: "Technologies", table: "u_tech_worked_on", icon: "Monitor" }
+      { name: "Certifications", table: "u_certifications", icon: "Award" }
     ]
   },
   {
     category: "Service Management",
     items: [
       { name: "Knowledge", table: "u_snow_skills", icon: "BookOpen" },
-      { name: "Visual Task Boards", table: "u_projects_built", icon: "Trello" }
+      { name: "Technologies", table: "u_tech_worked_on", icon: "Monitor" }
     ]
   },
   {

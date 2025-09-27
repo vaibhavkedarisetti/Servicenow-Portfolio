@@ -13,8 +13,11 @@ function App() {
   const [selectedRecord, setSelectedRecord] = useState(null);
 
   const handleNavigate = (table, name) => {
-    setCurrentView(table);
-    setSelectedRecord(null);
+    if (table) {
+      setCurrentView(table);
+      setSelectedRecord(null);
+    }
+    setSidebarOpen(false); // Always close sidebar on navigate
   };
 
   const handleRecordSelect = (record, table) => {
@@ -74,13 +77,15 @@ function App() {
               onNavigate={handleNavigate}
             />
             
-            {/* Main Content */}
-            <MainContent 
-              currentView={currentView}
-              selectedRecord={selectedRecord}
-              onRecordSelect={handleRecordSelect}
-              onBackToList={handleBackToList}
-            />
+            {/* Main Content - Make it scrollable */}
+            <div className={`flex-1 ${currentView === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'}`}>
+              <MainContent 
+                currentView={currentView}
+                selectedRecord={selectedRecord}
+                onRecordSelect={handleRecordSelect}
+                onBackToList={handleBackToList}
+              />
+            </div>
           </div>
         </div>
 
@@ -89,6 +94,7 @@ function App() {
           isOpen={virtualAgentOpen}
           onClose={() => setVirtualAgentOpen(false)}
         />
+
       </ServiceNowBackground>
     </div>
   );

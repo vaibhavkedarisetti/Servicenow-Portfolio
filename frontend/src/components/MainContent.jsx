@@ -5,142 +5,72 @@ import ListView from './ListView';
 import FormView from './FormView';
 
 const MainContent = ({ currentView, selectedRecord, onRecordSelect, onBackToList }) => {
-  if (currentView === 'form' && selectedRecord) {
-    return <FormView record={selectedRecord} onBack={onBackToList} />;
-  }
-
-  if (currentView && currentView !== 'dashboard') {
-    return <ListView table={currentView} onRecordSelect={onRecordSelect} />;
-  }
-
-  // Default Dashboard View
-  return (
-    <div className="flex-1 text-white">
-      {/* Hero Section */}
-      <div className="text-center py-20">
-        <div className="max-w-4xl mx-auto px-6">
-          {/* Profile Image */}
-          <div className="mb-8">
-            <img 
-              src={personalInfo.profileImage}
-              alt={personalInfo.name}
-              className="w-32 h-32 rounded-full mx-auto border-4 border-white/20 shadow-xl"
-            />
-          </div>
-
-          {/* Name and Title */}
-          <h1 className="text-5xl font-bold mb-4 text-white">
-            {personalInfo.name}
-          </h1>
-          <h2 className="text-2xl text-white/80 mb-8">
-            {personalInfo.title}
-          </h2>
-
-          {/* Summary */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-8 mb-8 text-left">
-            <h3 className="text-xl font-semibold mb-4 text-white">Summary</h3>
-            <p className="text-white/90 leading-relaxed text-lg">
-              {personalInfo.summary}
-            </p>
-          </div>
-
-          {/* Resume Button */}
-          <div className="mb-8">
-            <a
-              href={personalInfo.resumeLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-white text-[#1a4d72] px-8 py-3 rounded-lg font-semibold hover:bg-white/90 transition-colors inline-flex items-center gap-2 shadow-lg"
-            >
-              <ExternalLink className="w-5 h-5" />
-              View Resume
-            </a>
-          </div>
-
-          {/* Contact Information */}
-          <div className="bg-white/10 backdrop-blur-sm rounded-lg p-6">
-            <h3 className="text-lg font-semibold mb-4 text-white">Contact Information</h3>
-            <div className="grid md:grid-cols-2 gap-4 text-left">
-              <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-white/60" />
-                <a href={`mailto:${personalInfo.email}`} className="text-white/90 hover:text-white">
-                  {personalInfo.email}
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-white/60" />
-                <span className="text-white/90">{personalInfo.phone}</span>
-              </div>
-              <div className="flex items-center gap-3">
-                <Linkedin className="w-5 h-5 text-white/60" />
-                <a 
-                  href={personalInfo.linkedin} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white/90 hover:text-white"
-                >
-                  LinkedIn Profile
-                </a>
-              </div>
-              <div className="flex items-center gap-3">
-                <Github className="w-5 h-5 text-white/60" />
-                <a 
-                  href={personalInfo.github} 
-                  target="_blank" 
-                  rel="noopener noreferrer"
-                  className="text-white/90 hover:text-white"
-                >
-                  GitHub Profile
-                </a>
-              </div>
+  const renderContent = () => {
+    if (currentView === 'form' && selectedRecord) {
+      return <FormView record={selectedRecord} onBack={onBackToList} />;
+    }
+  
+    if (currentView && currentView !== 'dashboard') {
+      return <ListView table={currentView} onRecordSelect={onRecordSelect} />;
+    }
+  
+    // Default Dashboard View
+    return (
+      <div className="text-white">
+        {/* Hero Section */}
+        <div className="text-center py-6 sm:py-10 lg:py-12 bg-gray-800/10">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            {/* Profile Image */}
+            <div className="mb-4 sm:mb-6">
+              <img 
+                src={personalInfo.profileImage}
+                alt={personalInfo.name}
+                className="w-28 h-28 sm:w-32 sm:h-32 lg:w-40 lg:h-40 rounded-full mx-auto border-2 sm:border-4 border-white/40 shadow-2xl backdrop-blur-sm bg-white/10"
+              />
             </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Bottom Section */}
-      <div className="bg-white/5 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto px-6 py-16">
-          <div className="text-center mb-12">
-            <p className="text-white/60 text-sm uppercase tracking-wider mb-4">GO FURTHER</p>
-            <h2 className="text-4xl font-bold text-white">
-              Power your workflow applications
+            {/* Name and Title */}
+            <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold mb-2 sm:mb-3 text-white px-2">
+              {personalInfo.name}
+            </h1>
+            <h2 className="text-base sm:text-lg lg:text-xl text-white/80 px-2 flex items-center justify-center gap-2">
+              <span>ServiceNow Developer</span>
             </h2>
           </div>
+        </div>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Experience Card */}
-            <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 rounded-lg text-white">
-              <h3 className="text-2xl font-bold mb-4">Experience & Projects</h3>
-              <p className="mb-6 text-white/90">
-                Discover my work at HCL Tech and innovative ServiceNow integrations including AI-powered solutions and custom applications.
-              </p>
-              <div className="text-sm opacity-90 space-y-1">
-                <div>• PayPal Project - ServiceNow Development</div>
-                <div>• Claude AI + ServiceNow Integration (MCP)</div>
-                <div>• GenAI Summarization with Now Assist</div>
-                <div>• Chrome Extension for Quick Launch</div>
-                <div>• Gemini AI Chat in Service Portal</div>
-              </div>
-            </div>
+        {/* Summary Section */}
+        <div className="bg-gray-100 py-10 sm:py-12 lg:py-16">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+            <p className="text-black leading-relaxed text-sm sm:text-lg lg:text-xl max-w-xs sm:max-w-lg lg:max-w-2xl mx-auto font-medium text-center">
+              {personalInfo.summary}
+            </p>
 
-            {/* Skills & Certifications Card */}
-            <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-8 rounded-lg text-white">
-              <h3 className="text-2xl font-bold mb-4">Skills & Certifications</h3>
-              <p className="mb-6 text-white/90">
-                Explore my 5x ServiceNow certifications and expertise across ITSM, HRSD, and CSM modules with hands-on scripting experience.
-              </p>
-              <div className="text-sm opacity-90 space-y-1">
-                <div>• CAD - Certified Application Developer</div>
-                <div>• CSA - Certified System Administrator</div>
-                <div>• CIS-ITSM, CIS-HRSD, CIS-CSM</div>
-                <div>• ATF, Agentic AI, CMDB Configuration</div>
-                <div>• JavaScript, Python, Flow Designer</div>
-              </div>
+            {/* Resume Button */}
+            <div className="text-center mt-8 sm:mt-12">
+              <a
+                href="https://drive.google.com/file/d/1UmlOs27ACEeXPFLCCAfDrRxgbAs4evmG/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-[#1a4d72] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-[#0f3a5f] transition-colors inline-flex items-center gap-2 shadow-lg text-sm sm:text-base"
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5">
+                  <path d="M15 3h6v6"></path>
+                  <path d="M10 14 21 3"></path>
+                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                </svg>
+                <span>View Resume</span>
+              </a>
             </div>
           </div>
         </div>
       </div>
+    );
+  };
+
+  return (
+    <div className={`w-full ${currentView !== 'dashboard' ? 'h-full' : ''}`}>
+      {renderContent()}
     </div>
   );
 };
