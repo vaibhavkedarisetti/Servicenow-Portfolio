@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Search, Settings, Bell, MessageCircle, User, ChevronDown } from 'lucide-react';
 import { personalInfo } from '../data/mockData';
 
@@ -28,16 +29,16 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
           </div>
         </button>
         
-        <button 
-          onClick={() => window.location.href = '/'}
+        <Link 
+          to="/"
           className="flex items-center gap-1 sm:gap-2 hover:bg-white/10 p-1 sm:p-2 rounded"
         >
           <img 
-            src="/logo.svg" 
+            src={`${process.env.PUBLIC_URL}/logo.svg`} 
             alt="Logo" 
             className="h-6 sm:h-8 w-auto object-contain"
           />
-        </button>
+        </Link>
       </div>
 
       {/* Main Navigation - Hidden on mobile */}

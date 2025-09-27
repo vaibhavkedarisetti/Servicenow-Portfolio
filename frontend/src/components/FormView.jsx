@@ -313,9 +313,9 @@ const FormView = ({ record, onBack }) => {
                   <Github className={commonIconClass} />
                   <button 
                     className="text-blue-600 hover:text-blue-800 underline cursor-pointer bg-transparent border-none p-0 truncate"
-                    onClick={() => window.open('https://github.com/M10O', '_blank')}
+                    onClick={() => window.open('https://github.com/vaibhavkedarisetti', '_blank')}
                   >
-                    https://github.com/M10O
+                    https://github.com/vaibhavkedarisetti
                   </button>
                 </div>
               </div>

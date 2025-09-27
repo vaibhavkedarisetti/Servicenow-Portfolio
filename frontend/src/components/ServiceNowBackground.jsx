@@ -7,7 +7,7 @@ const ServiceNowBackground = ({ children }) => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: 'url(/portfolio-bg.png)',
+          backgroundImage: `url(${process.env.PUBLIC_URL}/portfolio-bg.png)`,
         }}
       />
       
