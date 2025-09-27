@@ -57,18 +57,33 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
   return (
     <div className="w-64 bg-[#0f3a5f] text-white h-screen overflow-y-auto">
       {/* Filter Header */}
-      <div className="p-4 border-b border-white/10">
-        <div className="flex items-center gap-2 bg-[#1a4d72] px-3 py-2 rounded">
-          <Filter className="w-4 h-4 text-white/60" />
-          <span className="text-sm text-white/80">Filter</span>
-        </div>
-        <div className="flex items-center gap-2 mt-2">
-          <button className="p-1 hover:bg-white/10 rounded">
+      <div className="p-3 border-b border-white/10">
+        <form onSubmit={handleFilterSubmit}>
+          <div className="flex items-center gap-2 bg-[#1a4d72] px-3 py-2 rounded mb-2">
+            <Filter className="w-4 h-4 text-white/60" />
+            <input
+              type="text"
+              value={filterText}
+              onChange={(e) => setFilterText(e.target.value)}
+              placeholder="Type table name..."
+              className="bg-transparent text-white placeholder-white/60 text-sm flex-1 focus:outline-none"
+            />
+          </div>
+        </form>
+        <div className="flex items-center gap-2">
+          <button 
+            onClick={() => setFilterText('')}
+            className="p-1 hover:bg-white/10 rounded"
+            title="Clear filter"
+          >
             <RotateCcw className="w-4 h-4 text-white/60" />
           </button>
-          <button className="p-1 hover:bg-white/10 rounded">
+          <button className="p-1 hover:bg-white/10 rounded" title="Settings">
             <Settings className="w-4 h-4 text-white/60" />
           </button>
+        </div>
+        <div className="text-xs text-white/50 mt-2">
+          Try: u_experience, u_certifications, u_projects_built
         </div>
       </div>
 
