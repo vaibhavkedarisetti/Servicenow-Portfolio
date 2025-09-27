@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Servicenow-Portfolio/static/css/main.49c6754d.css",
+    "main.js": "/Servicenow-Portfolio/static/js/main.2ce2d9ee.js",
+    "index.html": "/Servicenow-Portfolio/index.html",
+    "main.49c6754d.css.map": "/Servicenow-Portfolio/static/css/main.49c6754d.css.map",
+    "main.2ce2d9ee.js.map": "/Servicenow-Portfolio/static/js/main.2ce2d9ee.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.49c6754d.css",
+    "static/js/main.2ce2d9ee.js"
+  ]
+}
