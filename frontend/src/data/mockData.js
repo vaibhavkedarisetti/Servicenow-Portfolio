@@ -236,21 +236,22 @@ export const virtualAgentResponses = {
 // Navigation menu items
 export const navigationItems = [
   {
-    category: "My Portfolio",
+    category: "Self-Service",
     items: [
       { name: "Dashboard", table: "sys_dashboard", icon: "LayoutDashboard" },
       { name: "My Profile", table: "sys_user_profile", icon: "User" }
     ]
   },
   {
-    category: "Experience",
+    category: "Portfolio Management",
     items: [
       { name: "Work Experience", table: "u_experience", icon: "Briefcase" },
-      { name: "Projects Built", table: "u_projects_built", icon: "FolderOpen" }
+      { name: "Projects Built", table: "u_projects_built", icon: "FolderOpen" },
+      { name: "My Connected Apps", table: "u_projects_built", icon: "Link" }
     ]
   },
   {
-    category: "Education & Skills", 
+    category: "Education & Credentials", 
     items: [
       { name: "Education", table: "u_education", icon: "GraduationCap" },
       { name: "Certifications", table: "u_certifications", icon: "Award" },
@@ -259,7 +260,14 @@ export const navigationItems = [
     ]
   },
   {
-    category: "Contact",
+    category: "Service Management",
+    items: [
+      { name: "Knowledge", table: "u_snow_skills", icon: "BookOpen" },
+      { name: "Visual Task Boards", table: "u_projects_built", icon: "Trello" }
+    ]
+  },
+  {
+    category: "System", 
     items: [
       { name: "Contact Info", table: "sys_user_has_a_contact", icon: "Mail" }
     ]
