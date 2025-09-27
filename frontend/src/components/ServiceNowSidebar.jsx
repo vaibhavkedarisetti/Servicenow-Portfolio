@@ -10,12 +10,41 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
     "Education & Skills": true,
     "Contact": true
   });
+  const [filterText, setFilterText] = useState('');
 
   const toggleCategory = (category) => {
     setExpandedCategories(prev => ({
       ...prev,
       [category]: !prev[category]
     }));
+  };
+
+  const handleFilterSubmit = (e) => {
+    e.preventDefault();
+    if (filterText.trim()) {
+      const commandMap = {
+        'experience.list': 'u_experience',
+        'education.list': 'u_education', 
+        'certifications.list': 'u_certifications',
+        'projects_built.list': 'u_projects_built',
+        'snow_skills.list': 'u_snow_skills',
+        'tech_worked_on.list': 'u_tech_worked_on',
+        'sys_user_has_a_contact.list': 'sys_user_has_a_contact',
+        'u_experience': 'u_experience',
+        'u_education': 'u_education',
+        'u_certifications': 'u_certifications',
+        'u_projects_built': 'u_projects_built',
+        'u_snow_skills': 'u_snow_skills',
+        'u_tech_worked_on': 'u_tech_worked_on',
+        'sys_user_has_a_contact': 'sys_user_has_a_contact'
+      };
+
+      const table = commandMap[filterText.toLowerCase()];
+      if (table) {
+        onNavigate(table, filterText);
+        setFilterText('');
+      }
+    }
   };
 
   const getIcon = (iconName) => {
