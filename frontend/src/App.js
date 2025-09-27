@@ -36,14 +36,22 @@ function App() {
       'projects_built.list': 'u_projects_built',
       'snow_skills.list': 'u_snow_skills',
       'tech_worked_on.list': 'u_tech_worked_on',
-      'sys_user_has_a_contact.list': 'sys_user_has_a_contact'
+      'sys_user_has_a_contact.list': 'sys_user_has_a_contact',
+      'u_experience': 'u_experience',
+      'u_education': 'u_education',
+      'u_certifications': 'u_certifications',
+      'u_projects_built': 'u_projects_built',
+      'u_snow_skills': 'u_snow_skills',
+      'u_tech_worked_on': 'u_tech_worked_on',
+      'sys_user_has_a_contact': 'sys_user_has_a_contact'
     };
 
     const table = commandMap[command.toLowerCase()];
     if (table) {
       handleNavigate(table, command);
+      setSidebarOpen(false); // Close sidebar after navigation
     } else {
-      alert(`Command "${command}" not recognized. Try: ${Object.keys(commandMap).join(', ')}`);
+      alert(`Command "${command}" not recognized. Try: ${Object.keys(commandMap).slice(0, 7).join(', ')}`);
     }
   };
 
