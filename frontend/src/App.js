@@ -92,7 +92,7 @@ function App() {
             />
             
             {/* Main Content - Make it scrollable */}
-            <div className={`flex-1 transition-all duration-300 ease-in-out ${currentView === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'} ${sidebarOpen && currentView !== 'dashboard' ? 'lg:ml-64' : 'lg:ml-0'}`}>
+            <div className={`flex-1 transition-all duration-300 ease-in-out ${currentView === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'} lg:ml-64`}>
               <MainContent 
                 currentView={currentView}
                 selectedRecord={selectedRecord}
