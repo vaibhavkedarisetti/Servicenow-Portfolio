@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/Servicenow-Portfolio/static/css/main.49c6754d.css",
-    "main.js": "/Servicenow-Portfolio/static/js/main.6265d9b3.js",
+    "main.js": "/Servicenow-Portfolio/static/js/main.9e0559a0.js",
     "index.html": "/Servicenow-Portfolio/index.html",
     "main.49c6754d.css.map": "/Servicenow-Portfolio/static/css/main.49c6754d.css.map",
-    "main.6265d9b3.js.map": "/Servicenow-Portfolio/static/js/main.6265d9b3.js.map"
+    "main.9e0559a0.js.map": "/Servicenow-Portfolio/static/js/main.9e0559a0.js.map"
   },
   "entrypoints": [
     "static/css/main.49c6754d.css",
-    "static/js/main.6265d9b3.js"
+    "static/js/main.9e0559a0.js"
   ]
 }
