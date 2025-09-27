@@ -80,6 +80,7 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
         <button 
           onClick={onOpenVirtualAgent}
           className="p-2 hover:bg-white/10 rounded relative"
+          title="Open Virtual Agent"
         >
           <MessageCircle className="w-4 h-4" />
           <span className="absolute -top-1 -right-1 w-3 h-3 bg-red-500 rounded-full text-xs flex items-center justify-center text-white">
