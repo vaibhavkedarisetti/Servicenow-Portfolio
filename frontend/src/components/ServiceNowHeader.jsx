@@ -41,7 +41,12 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
 
       {/* Main Navigation */}
       <nav className="hidden md:flex ml-8 gap-6">
-        <a href="#" className="text-white/80 hover:text-white text-sm">All</a>
+        <button 
+          onClick={onToggleNav} 
+          className="text-white/80 hover:text-white text-sm"
+        >
+          All Applications
+        </button>
         <a href="#" className="text-white/80 hover:text-white text-sm">Favorites</a>
         <a href="#" className="text-white/80 hover:text-white text-sm">History</a>
         <a href="#" className="text-white/80 hover:text-white text-sm">Workspaces</a>
