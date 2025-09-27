@@ -104,34 +104,38 @@ const MainContent = ({ currentView, selectedRecord, onRecordSelect, onBackToList
           <div className="text-center mb-12">
             <p className="text-white/60 text-sm uppercase tracking-wider mb-4">GO FURTHER</p>
             <h2 className="text-4xl font-bold text-white">
-              Explore my ServiceNow expertise
+              Power your workflow applications
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Experience Card */}
-            <div className="bg-gradient-to-br from-green-600 to-blue-600 p-8 rounded-lg text-white">
+            <div className="bg-gradient-to-br from-green-500 to-teal-600 p-8 rounded-lg text-white">
               <h3 className="text-2xl font-bold mb-4">Experience & Projects</h3>
               <p className="mb-6 text-white/90">
                 Discover my work at HCL Tech and innovative ServiceNow integrations including AI-powered solutions and custom applications.
               </p>
-              <div className="text-sm opacity-80">
-                <div>✓ PayPal Project Lead</div>
-                <div>✓ Claude AI Integration</div>
-                <div>✓ GenAI Summarization Tool</div>
+              <div className="text-sm opacity-90 space-y-1">
+                <div>• PayPal Project - ServiceNow Development</div>
+                <div>• Claude AI + ServiceNow Integration (MCP)</div>
+                <div>• GenAI Summarization with Now Assist</div>
+                <div>• Chrome Extension for Quick Launch</div>
+                <div>• Gemini AI Chat in Service Portal</div>
               </div>
             </div>
 
             {/* Skills & Certifications Card */}
-            <div className="bg-gradient-to-br from-blue-600 to-purple-600 p-8 rounded-lg text-white">
+            <div className="bg-gradient-to-br from-blue-500 to-indigo-600 p-8 rounded-lg text-white">
               <h3 className="text-2xl font-bold mb-4">Skills & Certifications</h3>
               <p className="mb-6 text-white/90">
                 Explore my 5x ServiceNow certifications and expertise across ITSM, HRSD, and CSM modules with hands-on scripting experience.
               </p>
-              <div className="text-sm opacity-80">
-                <div>✓ 5 Core Certifications</div>
-                <div>✓ 3 Micro-Certifications</div>
-                <div>✓ Full-Stack Development</div>
+              <div className="text-sm opacity-90 space-y-1">
+                <div>• CAD - Certified Application Developer</div>
+                <div>• CSA - Certified System Administrator</div>
+                <div>• CIS-ITSM, CIS-HRSD, CIS-CSM</div>
+                <div>• ATF, Agentic AI, CMDB Configuration</div>
+                <div>• JavaScript, Python, Flow Designer</div>
               </div>
             </div>
           </div>
