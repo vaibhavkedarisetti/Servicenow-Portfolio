@@ -93,7 +93,7 @@ const VirtualAgent = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-4 right-4 w-full max-w-sm h-auto max-h-[70vh] sm:max-h-[500px] bg-white border border-gray-200 rounded-lg shadow-2xl z-50 flex flex-col">
+    <div className="fixed bottom-4 right-4 w-2/3 h-auto max-h-[70vh] sm:max-h-[500px] sm:w-full sm:max-w-sm bg-white border border-gray-200 rounded-lg shadow-2xl z-50 flex flex-col">
       {/* Header */}
       <div className="bg-[#1a4d72] text-white p-2 sm:p-4 rounded-t-lg flex items-center justify-between">
         <div className="flex items-center gap-1 sm:gap-2">

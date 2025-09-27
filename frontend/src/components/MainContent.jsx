@@ -49,7 +49,7 @@ const MainContent = ({ currentView, selectedRecord, onRecordSelect, onBackToList
             {/* Resume Button */}
             <div className="text-center mt-8 sm:mt-12">
               <a
-                href="https://drive.google.com/file/d/1UmlOs27ACEeXPFLCCAfDrRxgbAs4evmG/view?usp=sharing"
+                href="https://drive.google.com/file/d/1igQhbJjHA71iKMqKzpW3ZbyWhA8UG2Iq/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="bg-[#1a4d72] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-[#0f3a5f] transition-colors inline-flex items-center gap-2 shadow-lg text-sm sm:text-base"

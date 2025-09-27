@@ -5,6 +5,7 @@ import ServiceNowSidebar from './components/ServiceNowSidebar';
 import ServiceNowBackground from './components/ServiceNowBackground';
 import MainContent from './components/MainContent';
 import VirtualAgent from './components/VirtualAgent';
+import { Bot } from 'lucide-react';
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -47,7 +48,7 @@ function App() {
   const handleSearchCommand = (command) => {
     const commandMap = {
       'experience.list': 'u_experience',
-      'education.list': 'u_education', 
+      'education.list': 'u_education',
       'certifications.list': 'u_certifications',
       'projects_built.list': 'u_projects_built',
       'snow_skills.list': 'u_snow_skills',
@@ -76,24 +77,23 @@ function App() {
       <ServiceNowBackground>
         <div className="flex flex-col h-screen">
           {/* Header */}
-          <ServiceNowHeader 
+          <ServiceNowHeader
             onSearchCommand={handleSearchCommand}
             onToggleNav={() => setSidebarOpen(!sidebarOpen)}
-            onOpenVirtualAgent={() => setVirtualAgentOpen(true)}
             onHeaderNavigate={handleHeaderNavigate}
           />
-          
+
           {/* Main Layout */}
           <div className="flex flex-1 overflow-hidden relative">
             {/* Sidebar */}
-            <ServiceNowSidebar 
+            <ServiceNowSidebar
               isOpen={sidebarOpen}
               onNavigate={handleNavigate}
             />
-            
+
             {/* Main Content - Make it scrollable */}
             <div className={`flex-1 transition-all duration-300 ease-in-out ${currentView === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'} ${sidebarOpen && currentView !== 'dashboard' ? 'lg:ml-64' : 'lg:ml-0'}`}>
-              <MainContent 
+              <MainContent
                 currentView={currentView}
                 selectedRecord={selectedRecord}
                 onRecordSelect={handleRecordSelect}
@@ -103,8 +103,24 @@ function App() {
           </div>
         </div>
 
+        {/* Floating Action Button for Virtual Agent */}
+        {!virtualAgentOpen && (
+          <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2">
+            <div className="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-lg animate-pulse">
+              Click me!
+            </div>
+            <button
+              onClick={() => setVirtualAgentOpen(true)}
+              className="bg-[#1a4d72] text-white p-4 rounded-full shadow-lg hover:bg-[#0f3a5f] transition-colors"
+              title="Open Virtual Agent"
+            >
+              <Bot className="w-6 h-6" />
+            </button>
+          </div>
+        )}
+
         {/* Virtual Agent */}
-        <VirtualAgent 
+        <VirtualAgent
           isOpen={virtualAgentOpen}
           onClose={() => setVirtualAgentOpen(false)}
         />

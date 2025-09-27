@@ -82,17 +82,6 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent, on
           <ChevronDown className="w-4 h-4" />
         </button>
         
-        <button 
-          onClick={onOpenVirtualAgent}
-          className="p-1 sm:p-2 hover:bg-white/10 rounded relative"
-          title="Open Virtual Agent"
-        >
-          <MessageCircle className="w-3 h-3 sm:w-4 sm:h-4" />
-          <span className="absolute -top-1 -right-1 w-2 h-2 sm:w-3 sm:h-3 bg-red-500 rounded-full text-xs flex items-center justify-center text-white">
-            1
-          </span>
-        </button>
-        
         <button className="hidden md:block p-2 hover:bg-white/10 rounded">
           <Settings className="w-4 h-4" />
         </button>

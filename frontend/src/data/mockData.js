@@ -7,7 +7,7 @@ export const personalInfo = {
   phone: "+919347130705",
   linkedin: "https://linkedin.com/in/vaibhav-kedarisetti",
   github: "https://github.com/M10O",
-  resumeLink: "https://drive.google.com/file/d/1UmlOs27ACEeXPFLCCAfDrRxgbAs4evmG/view?usp=sharing",
+  resumeLink: "https://drive.google.com/file/d/1igQhbJjHA71iKMqKzpW3ZbyWhA8UG2Iq/view?usp=sharing",
   profileImage: `${process.env.PUBLIC_URL}/vaibhav-profile.png`,
   summary: "ServiceNow Developer with hands-on experience across ITSM, HRSD, and CSM modules. 5x certified (CAD, CSA, CIS-CSM, CIS-ITSM, CIS-HRSD) with expertise in scripting, integrations, and GenAI use cases. Skilled in building custom applications, workflows, and AI-powered solutions that enhance customer service operations and demo experiences."
 };
