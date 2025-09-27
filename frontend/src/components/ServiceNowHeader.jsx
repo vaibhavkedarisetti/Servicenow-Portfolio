@@ -55,7 +55,7 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
       </nav>
 
       {/* Center Instance Badge - Hidden on small screens */}
-      <div className="hidden sm:block absolute left-1/2 transform -translate-x-1/2">
+      <div className="hidden lg:block absolute left-1/2 transform -translate-x-1/2">
         <div className="bg-[#0f3a5f] border border-white/20 px-2 sm:px-4 py-1 rounded-full flex items-center gap-1 sm:gap-2">
           <span className="text-xs">ServiceNow</span>
           <span className="text-xs">⭐</span>
@@ -65,7 +65,7 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
       {/* Right Side Controls */}
       <div className="ml-auto flex items-center gap-1 sm:gap-3">
         {/* Search Bar - Responsive width */}
-        <form onSubmit={handleSearchSubmit} className="relative">
+        <form onSubmit={handleSearchSubmit} className="relative hidden md:flex">
           <div className="flex items-center bg-[#0f3a5f] border border-white/20 rounded">
             <Search className="w-3 h-3 sm:w-4 sm:h-4 text-white/60 ml-2 sm:ml-3" />
             <input
@@ -79,7 +79,7 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
         </form>
 
         {/* Action Icons - Hide some on mobile */}
-        <button className="hidden sm:block p-2 hover:bg-white/10 rounded">
+        <button className="hidden md:block p-2 hover:bg-white/10 rounded">
           <ChevronDown className="w-4 h-4" />
         </button>
         
@@ -94,11 +94,11 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
           </span>
         </button>
         
-        <button className="hidden sm:block p-2 hover:bg-white/10 rounded">
+        <button className="hidden md:block p-2 hover:bg-white/10 rounded">
           <Settings className="w-4 h-4" />
         </button>
         
-        <button className="hidden sm:block p-2 hover:bg-white/10 rounded">
+        <button className="hidden md:block p-2 hover:bg-white/10 rounded">
           <Bell className="w-4 h-4" />
         </button>
 

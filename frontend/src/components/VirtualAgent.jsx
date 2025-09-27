@@ -7,7 +7,7 @@ const VirtualAgent = ({ isOpen, onClose }) => {
     {
       id: 1,
       type: 'bot',
-      content: "Hi, I'm Magic Vaibhav's Virtual Agent. I can help you explore his profile. Type 'help' to see options.",
+      content: "Hi, I'm Magic, Vaibhav's Virtual Agent. I can help you explore his profile. Type 'help' to see options and table names to slide through.",
       timestamp: new Date()
     }
   ]);
@@ -86,7 +86,7 @@ const VirtualAgent = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed bottom-2 right-2 sm:bottom-4 sm:right-4 w-[calc(100vw-0.5rem)] sm:w-96 h-[calc(100vh-1rem)] sm:h-[500px] bg-white border border-gray-200 rounded-lg shadow-2xl z-50 flex flex-col">
+    <div className="fixed bottom-4 right-4 w-full max-w-sm h-auto max-h-[70vh] sm:max-h-[500px] bg-white border border-gray-200 rounded-lg shadow-2xl z-50 flex flex-col">
       {/* Header */}
       <div className="bg-[#1a4d72] text-white p-2 sm:p-4 rounded-t-lg flex items-center justify-between">
         <div className="flex items-center gap-1 sm:gap-2">
