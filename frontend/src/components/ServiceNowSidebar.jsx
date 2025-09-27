@@ -56,11 +56,11 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
     <>
       {/* Overlay for mobile */}
       <div
-        className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        className={`absolute inset-0 bg-black/40 z-30 lg:hidden transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         onClick={() => onNavigate(null)} // Close sidebar on overlay click
       />
 
-      <div className={`fixed top-16 left-0 h-[calc(100vh-4rem)] bg-[#0f3a5f] text-white z-40 w-72 sm:w-80 lg:w-64 transform transition-transform duration-300 ease-in-out lg:relative lg:top-0 lg:h-full ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:-ml-64`}>
+      <div className={`absolute top-0 left-0 h-full bg-[#0f3a5f] text-white z-30 w-72 sm:w-80 lg:w-64 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="h-full flex flex-col overflow-y-auto">
           {/* Filter Header */}
           <div className="p-3 border-b border-white/10">
