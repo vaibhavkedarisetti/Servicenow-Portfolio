@@ -47,7 +47,7 @@ export const experience = [
       "Developed a dynamic tourism website tailored to client requirements, covering both front-end using React and back-end using MongoDB.",
       "Designed user-friendly interfaces and a comprehensive admin panel for managing content, bookings, and user data.",
       "Integrated RESTful APIs for creating and managing tour packages, storing data securely in MongoDB.",
-      "Implemented core features such as Gallery, Packages, Sightseeing, User Profile, and Booking modules to enhance user experience and engagement."
+      "Implemented core features such as Gallery, Packages, Sightseeing, User Profile, and booking modules to enhance user experience and engagement."
     ]
   },
   {
@@ -57,93 +57,11 @@ export const experience = [
     location: "Hyderabad, India",
     period: "May 2022 - July 2022",
     status: "Completed",
+    favorite: false,
     details: [
       "Developing & Testing of an android application called nudge math",
       "Techstack: ReactJS, HTML, CSS, JS, Git"
     ]
-  }
-];
-
-export const education = [
-  {
-    id: "EDU001",
-    institution: "BML Munjal University",
-    degree: "B.Tech in Computer Science and Engineering",
-    period: "Aug 2020 – Aug 2024",
-    status: "Completed"
-  },
-  {
-    id: "EDU002", 
-    institution: "Aditya Junior College",
-    degree: "Intermediate (Maths, Physics, Chemistry)",
-    period: "May 2017 – Mar 2019",
-    status: "Completed"
-  },
-  {
-    id: "EDU003",
-    institution: "Sri Chaitanya Techno School", 
-    degree: "Secondary School (Class X)",
-    period: "May 2016 – Mar 2017",
-    status: "Completed"
-  }
-];
-
-export const certifications = [
-  {
-    id: "CERT001",
-    name: "Certified Application Developer (CAD)",
-    issuer: "ServiceNow",
-    status: "Active",
-    category: "Core Certification"
-  },
-  {
-    id: "CERT002", 
-    name: "Certified System Administrator (CSA)",
-    issuer: "ServiceNow",
-    status: "Active",
-    category: "Core Certification"
-  },
-  {
-    id: "CERT003",
-    name: "Certified Implementation Specialist – IT Service Management (CIS–ITSM)",
-    issuer: "ServiceNow", 
-    status: "Active",
-    category: "Implementation Specialist"
-  },
-  {
-    id: "CERT004",
-    name: "Certified Implementation Specialist – Human Resources Service Delivery (CIS–HRSD)",
-    issuer: "ServiceNow",
-    status: "Active", 
-    category: "Implementation Specialist"
-  },
-  {
-    id: "CERT005",
-    name: "Certified Implementation Specialist – Customer Service Management (CIS–CSM)",
-    issuer: "ServiceNow",
-    status: "Active",
-    category: "Implementation Specialist"
-  },
-  {
-    id: "CERT006",
-    name: "Automated Test Framework (ATF)",
-    issuer: "ServiceNow",
-    status: "Active",
-    category: "Micro-Certification"
-  },
-  {
-    id: "CERT007",
-    name: "Agentic AI Executive",
-    issuer: "ServiceNow",
-    status: "Active", 
-    category: "Micro-Certification"
-  },
-  {
-    id: "CERT008",
-    name: "Configure the CMDB",
-    issuer: "ServiceNow",
-    status: "Active",
-    category: "Micro-Certification"
   }
 ];
 
@@ -170,7 +88,8 @@ export const projects = [
     ],
     technologies: ["JavaScript", "HTML", "CSS", "Chrome Developer APIs"],
     link: "#",
-    status: "Completed"
+    status: "Completed",
+    favorite: false
   },
   {
     id: "PROJ003",
@@ -183,7 +102,8 @@ export const projects = [
     ],
     technologies: ["Gemini AI", "ServiceNow Service Portal", "Angular", "REST API"],
     link: "#",
-    status: "Completed"
+    status: "Completed",
+    favorite: false
   },
   {
     id: "PROJ004",
@@ -194,33 +114,108 @@ export const projects = [
     ],
     technologies: ["Now Assist", "GenAI", "ServiceNow Agent Workspace"],
     link: "#", 
+    status: "Completed",
+    favorite: false
+  }
+];
+
+export const education = [
+  {
+    id: "EDU001",
+    institution: "BML Munjal University",
+    degree: "B.Tech in Computer Science and Engineering",
+    period: "Aug 2020 – Aug 2024",
+    status: "Completed"
+  },
+  {
+    id: "EDU002",
+    institution: "Aditya Junior College",
+    degree: "Intermediate (Maths, Physics, Chemistry)",
+    period: "May 2017 – Mar 2019",
+    status: "Completed"
+  },
+  {
+    id: "EDU003",
+    institution: "Sri Chaitanya Techno School",
+    degree: "Secondary School (Class X)",
+    period: "May 2016 – Mar 2017",
+    status: "Completed"
+  }
+];
+
+export const certifications = [
+  {
+    id: "CERT001",
+    name: "Certified Application Developer (CAD)",
+    issuer: "ServiceNow",
+    category: "ServiceNow",
+    status: "Completed"
+  },
+  {
+    id: "CERT002",
+    name: "Certified System Administrator (CSA)",
+    issuer: "ServiceNow",
+    category: "ServiceNow",
+    status: "Completed"
+  },
+  {
+    id: "CERT003",
+    name: "Certified Implementation Specialist – IT Service Management (CIS-ITSM)",
+    issuer: "ServiceNow",
+    category: "ServiceNow",
+    status: "Completed"
+  },
+  {
+    id: "CERT004",
+    name: "Certified Implementation Specialist – HR Service Delivery (CIS-HRSD)",
+    issuer: "ServiceNow",
+    category: "ServiceNow",
+    status: "Completed"
+  },
+  {
+    id: "CERT005",
+    name: "Certified Implementation Specialist – Customer Service Management (CIS-CSM)",
+    issuer: "ServiceNow",
+    category: "ServiceNow",
+    status: "Completed"
+  },
+  {
+    id: "CERT006",
+    name: "Micro-Certification – Automated Test Framework (ATF)",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
+    status: "Completed"
+  },
+  {
+    id: "CERT007",
+    name: "Micro-Certification – Agentic AI Executive",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
+    status: "Completed"
+  },
+  {
+    id: "CERT008",
+    name: "Micro-Certification – Configure the CMDB",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
     status: "Completed"
   }
 ];
 
 export const skills = {
-  ITSM: [
-    "Scripting", "Integration", "ACL", "SLA", "Incident Management", 
-    "Change Management", "Email Notifications", "Major Incident Management",
-    "Flow Designer", "Service Requests", "Catalog Management", "Transform Maps", "Workflow"
-  ],
-  HRSD: [
-    "Case Management", "COEs", "Profile Management", "HR Services Configuration"
-  ],
-  CSM: [
-    "Case Workflows", "Account and Contact Management", "Omnichannels"
-  ]
+  "ITSM": ["Scripting", "Integration", "ACL", "SLA", "Incident Management", "Change Management", "Email Notifications", "Major Incident Management", "Flow Designer", "Service Requests", "Catalog Management", "Transform Maps", "Workflow"],
+  "HRSD": ["Case Management", "COEs", "Profile Management", "HR Services Configuration"],
+  "CSM": ["Case Workflows", "Account and Contact Management", "Omnichannels"]
 };
 
 export const technologies = {
-  Programming: ["Java", "Python"],
+  "Programming": ["Java", "Python"],
   "Web Development": ["JavaScript", "HTML", "Tailwind CSS", "Glide API", "Jelly Scripting", "XML"]
 };
 
-// Virtual Agent responses
 export const virtualAgentResponses = {
   help: {
-    message: "I can help you explore Vaibhav's profile. Type the below commands in **All nav**",
+    message: "I can help you explore Vaibhav's profile. Type the below commands in **All navigator at top left**",
     options: [
       "experience.list - View work experience records",
       "education.list - View education records",
@@ -230,10 +225,10 @@ export const virtualAgentResponses = {
       "tech_worked_on.list - View technologies",
       "sys_user_has_a_contact.list - View contact information"
     ],
-    recruiterNote: "A note to recruiters: Vaibhav is actively looking for new opportunities and is available to join immediately."
+    //recruiterNote: "**A note to recruiters: Vaibhav is actively looking for new opportunities and is available to join immediately.**"
   },
   certifications: {
-    message: "Vaibhav holds 5 core ServiceNow certifications plus 3 micro-certifications:",
+    message: "Vaibhav holds 5 core ServiceNow certifications  ",
     data: certifications
   },
   experience: {

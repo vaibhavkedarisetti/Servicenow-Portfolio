@@ -7,7 +7,14 @@ const VirtualAgent = ({ isOpen, onClose }) => {
     {
       id: 1,
       type: 'bot',
-      content: "Hi, I'm Magic, Vaibhav's Virtual Agent. I can help you explore his profile. Type 'help' to see options and table names to slide through.",
+      content: "Hi, I'm Magic, Vaibhav's Virtual Agent. I can help you explore his profile. Type '**help**' to see options and table names to slide through.",
+      timestamp: new Date()
+    },
+    {
+      id: 2,
+      type: 'bot',
+      content: "**A note to recruiters: Vaibhav is actively looking for new opportunities and is available to join immediately.**",
+      recruiterNote: true,
       timestamp: new Date()
     }
   ]);
@@ -120,14 +127,11 @@ const VirtualAgent = ({ isOpen, onClose }) => {
                   ? 'bg-gray-100 text-gray-800' 
                   : 'bg-[#1a4d72] text-white'
               }`}>
-                <p className="text-xs sm:text-sm whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: message.content.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') }} />
+                {!message.recruiterNote && <p className="text-xs sm:text-sm whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: message.content.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') }} />}
                 
-                {/* Options */}
-                                {/* Recruiter Note */}
+                {/* Recruiter Note */}
                 {message.recruiterNote && (
-                  <div className="mt-2 sm:mt-3 p-2 sm:p-3 rounded-lg bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs sm:text-sm">
-                    {message.recruiterNote}
-                  </div>
+                  <div className="mt-2 sm:mt-3 p-2 sm:p-3 rounded-lg bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs sm:text-sm" dangerouslySetInnerHTML={{ __html: message.content.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') }} />
                 )}
 
                 {/* Options */}

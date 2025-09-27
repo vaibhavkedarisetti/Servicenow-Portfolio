@@ -5,10 +5,10 @@ import { navigationItems } from '../data/mockData';
 
 const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
   const [expandedCategories, setExpandedCategories] = useState({
-    "My Portfolio": true,
-    "Experience": true,
-    "Education & Skills": true,
-    "Contact": true
+    "Portfolio Management": true,
+    "Education & Credentials": true,
+    "Service Management": true,
+    "System": true
   });
   const [filterText, setFilterText] = useState('');
 
@@ -24,7 +24,7 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
     if (filterText.trim()) {
       const commandMap = {
         'experience.list': 'u_experience',
-        'education.list': 'u_education', 
+        'education.list': 'u_education',
         'certifications.list': 'u_certifications',
         'projects_built.list': 'u_projects_built',
         'snow_skills.list': 'u_snow_skills',
@@ -55,12 +55,12 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
   return (
     <>
       {/* Overlay for mobile */}
-      <div 
-        className={`fixed inset-0 bg-black/40 z-40 lg:hidden transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      <div
+        className={`absolute inset-0 bg-black/40 z-30 lg:hidden transition-opacity ${isOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         onClick={() => onNavigate(null)} // Close sidebar on overlay click
       />
 
-      <div className={`fixed top-0 left-0 h-full bg-[#0f3a5f] text-white z-50 w-72 sm:w-80 lg:w-64 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:relative lg:translate-x-0`}>
+      <div className={`absolute top-0 left-0 h-full bg-[#0f3a5f] text-white z-30 w-72 sm:w-80 lg:w-64 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
         <div className="h-full flex flex-col overflow-y-auto">
           {/* Filter Header */}
           <div className="p-3 border-b border-white/10">
@@ -77,7 +77,7 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
               </div>
             </form>
             <div className="flex items-center gap-2">
-              <button 
+              <button
                 onClick={() => setFilterText('')}
                 className="p-1.5 hover:bg-white/10 rounded"
                 title="Clear filter"
@@ -102,8 +102,8 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
                   onClick={() => toggleCategory(section.category)}
                   className="flex items-center gap-2 w-full text-left px-2 py-2 hover:bg-white/10 rounded text-sm font-medium"
                 >
-                  {expandedCategories[section.category] ? 
-                    <ChevronDown className="w-4 h-4" /> : 
+                  {expandedCategories[section.category] ?
+                    <ChevronDown className="w-4 h-4" /> :
                     <ChevronRight className="w-4 h-4" />
                   }
                   <span className="truncate">{section.category}</span>

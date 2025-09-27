@@ -31,6 +31,19 @@ function App() {
     setSelectedRecord(null);
   };
 
+  const handleHeaderNavigate = (view) => {
+    const viewMap = {
+      history: 'u_experience',
+      workspaces: 'u_projects_built',
+      admin: 'sys_user_has_a_contact'
+    };
+    const newView = viewMap[view];
+    if (newView) {
+      setCurrentView(newView);
+      setSelectedRecord(null);
+    }
+  };
+
   const handleSearchCommand = (command) => {
     const commandMap = {
       'experience.list': 'u_experience',
@@ -67,10 +80,11 @@ function App() {
             onSearchCommand={handleSearchCommand}
             onToggleNav={() => setSidebarOpen(!sidebarOpen)}
             onOpenVirtualAgent={() => setVirtualAgentOpen(true)}
+            onHeaderNavigate={handleHeaderNavigate}
           />
           
           {/* Main Layout */}
-          <div className="flex flex-1 overflow-hidden">
+          <div className="flex flex-1 overflow-hidden relative">
             {/* Sidebar */}
             <ServiceNowSidebar 
               isOpen={sidebarOpen}
@@ -78,7 +92,7 @@ function App() {
             />
             
             {/* Main Content - Make it scrollable */}
-            <div className={`flex-1 ${currentView === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'}`}>
+            <div className={`flex-1 transition-all duration-300 ease-in-out ${currentView === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'} ${sidebarOpen && currentView !== 'dashboard' ? 'lg:ml-64' : 'lg:ml-0'}`}>
               <MainContent 
                 currentView={currentView}
                 selectedRecord={selectedRecord}

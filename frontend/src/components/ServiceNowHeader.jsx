@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Search, Settings, Bell, MessageCircle, User, ChevronDown } from 'lucide-react';
 import { personalInfo } from '../data/mockData';
 
-const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) => {
+const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent, onHeaderNavigate }) => {
   const [searchValue, setSearchValue] = useState('');
 
   const handleSearchSubmit = (e) => {
@@ -48,10 +48,9 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent }) 
         >
           All
         </button>
-        <a href="#" className="text-white/80 hover:text-white text-sm">Favorites</a>
-        <a href="#" className="text-white/80 hover:text-white text-sm">History</a>
-        <a href="#" className="text-white/80 hover:text-white text-sm">Workspaces</a>
-        <a href="#" className="text-white/80 hover:text-white text-sm">Admin</a>
+        <button onClick={() => onHeaderNavigate('history')} className="text-white/80 hover:text-white text-sm">History</button>
+        <button onClick={() => onHeaderNavigate('workspaces')} className="text-white/80 hover:text-white text-sm">Workspaces</button>
+        <button onClick={() => onHeaderNavigate('admin')} className="text-white/80 hover:text-white text-sm">Admin</button>
       </nav>
 
       {/* Center Instance Badge - Hidden on small screens */}
