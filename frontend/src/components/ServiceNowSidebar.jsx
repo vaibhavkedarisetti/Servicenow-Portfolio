@@ -60,7 +60,7 @@ const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
         onClick={() => onNavigate(null)} // Close sidebar on overlay click
       />
 
-      <div className={`fixed top-0 left-0 h-full bg-[#0f3a5f] text-white z-50 w-72 sm:w-80 lg:w-64 lg:static lg:z-auto transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:translate-x-0`}>
+      <div className={`fixed top-0 left-0 h-full bg-[#0f3a5f] text-white z-50 w-72 sm:w-80 lg:w-64 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'} lg:relative lg:translate-x-0`}>
         <div className="h-full flex flex-col overflow-y-auto">
           {/* Filter Header */}
           <div className="p-3 border-b border-white/10">

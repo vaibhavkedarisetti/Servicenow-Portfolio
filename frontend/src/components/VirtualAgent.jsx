@@ -120,8 +120,16 @@ const VirtualAgent = ({ isOpen, onClose }) => {
                   ? 'bg-gray-100 text-gray-800' 
                   : 'bg-[#1a4d72] text-white'
               }`}>
-                <p className="text-xs sm:text-sm">{message.content}</p>
+                <p className="text-xs sm:text-sm whitespace-pre-wrap" dangerouslySetInnerHTML={{ __html: message.content.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>') }} />
                 
+                {/* Options */}
+                                {/* Recruiter Note */}
+                {message.recruiterNote && (
+                  <div className="mt-2 sm:mt-3 p-2 sm:p-3 rounded-lg bg-yellow-100 border border-yellow-300 text-yellow-800 text-xs sm:text-sm">
+                    {message.recruiterNote}
+                  </div>
+                )}
+
                 {/* Options */}
                 {message.options && (
                   <div className="mt-1 sm:mt-2 space-y-1">

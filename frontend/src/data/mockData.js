@@ -220,16 +220,17 @@ export const technologies = {
 // Virtual Agent responses
 export const virtualAgentResponses = {
   help: {
-    message: "I can help you explore Vaibhav's profile. Here are the available commands:",
+    message: "I can help you explore Vaibhav's profile. Type the below commands in **All nav**",
     options: [
       "experience.list - View work experience records",
-      "education.list - View education records", 
+      "education.list - View education records",
       "certifications.list - View ServiceNow certifications",
       "projects_built.list - View project portfolio",
       "snow_skills.list - View ServiceNow skills",
       "tech_worked_on.list - View technologies",
       "sys_user_has_a_contact.list - View contact information"
-    ]
+    ],
+    recruiterNote: "A note to recruiters: Vaibhav is actively looking for new opportunities and is available to join immediately."
   },
   certifications: {
     message: "Vaibhav holds 5 core ServiceNow certifications plus 3 micro-certifications:",
