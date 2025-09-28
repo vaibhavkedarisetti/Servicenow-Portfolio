@@ -81,6 +81,7 @@ function App() {
             onSearchCommand={handleSearchCommand}
             onToggleNav={() => setSidebarOpen(!sidebarOpen)}
             onHeaderNavigate={handleHeaderNavigate}
+            currentView={currentView}
           />
 
           {/* Main Layout */}

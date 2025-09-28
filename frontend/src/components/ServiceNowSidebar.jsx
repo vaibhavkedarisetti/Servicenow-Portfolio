@@ -5,10 +5,10 @@ import { navigationItems } from '../data/mockData';
 
 const ServiceNowSidebar = ({ isOpen, onNavigate }) => {
   const [expandedCategories, setExpandedCategories] = useState({
-    "Portfolio Management": true,
-    "Education & Credentials": true,
-    "Service Management": true,
-    "System": true
+    "Portfolio Management": false,
+    "Education & Credentials": false,
+    "Service Management": false,
+    "System": false
   });
   const [filterText, setFilterText] = useState('');
 
