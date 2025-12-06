@@ -14,9 +14,9 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent, on
   };
 
   return (
-    <header className="bg-black text-white h-16 flex items-center px-2 sm:px-4 relative z-50">
+    <header className="bg-black text-white h-16 flex items-center px-2 sm:px-4 relative z-50 min-w-[320px] overflow-x-auto">
       {/* ServiceNow Logo and Nav Toggle */}
-      <div className="flex items-center gap-2 sm:gap-4">
+      <div className="flex items-center gap-2 sm:gap-4 flex-shrink-0">
         <button 
           onClick={onToggleNav}
           className="text-white hover:bg-white/10 p-1 sm:p-2 rounded"
@@ -77,7 +77,7 @@ const ServiceNowHeader = ({ onSearchCommand, onToggleNav, onOpenVirtualAgent, on
       </div>
 
       {/* Right Side Controls */}
-      <div className="ml-auto flex items-center gap-1 sm:gap-3">
+      <div className="ml-auto flex items-center gap-1 sm:gap-3 flex-shrink-0">
         {/* Search Bar - Responsive width */}
         <form onSubmit={handleSearchSubmit} className="relative hidden md:flex">
           <div className="flex items-center bg-[#0f3a5f] border border-white/20 rounded">

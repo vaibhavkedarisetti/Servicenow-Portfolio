@@ -16,10 +16,10 @@ const MainContent = ({ currentView, selectedRecord, onRecordSelect, onBackToList
   
     // Default Dashboard View
     return (
-      <div className="text-white">
+      <div className="text-white min-h-full flex flex-col min-w-[320px]">
         {/* Hero Section */}
-        <div className="text-center py-6 sm:py-10 lg:py-12 bg-gray-800/10">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6">
+        <div className="text-center py-6 sm:py-10 lg:py-12 bg-gray-800/10 flex-shrink-0">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 min-w-0">
             {/* Profile Image */}
             <div className="mb-4 sm:mb-6">
               <img 
@@ -40,21 +40,21 @@ const MainContent = ({ currentView, selectedRecord, onRecordSelect, onBackToList
         </div>
 
         {/* Summary Section */}
-        <div className="bg-gray-100 py-10 sm:py-12 lg:py-16">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <p className="text-black leading-relaxed text-sm sm:text-lg lg:text-xl max-w-xs sm:max-w-lg lg:max-w-2xl mx-auto font-medium text-center">
+        <div className="bg-gray-100 py-10 sm:py-12 lg:py-16 flex-grow flex-shrink-0 pb-20">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 min-w-0">
+            <p className="text-black leading-relaxed text-sm sm:text-lg lg:text-xl max-w-xs sm:max-w-lg lg:max-w-2xl mx-auto font-medium text-center break-words">
               {personalInfo.summary}
             </p>
 
             {/* Resume Button */}
             <div className="text-center mt-8 sm:mt-12">
               <a
-                href="https://drive.google.com/file/d/1igQhbJjHA71iKMqKzpW3ZbyWhA8UG2Iq/view?usp=sharing"
+                href="https://drive.google.com/file/d/1wNOuL9khx1mL5JftfdiTd_PeCVFWgR7H/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#1a4d72] text-white px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold hover:bg-[#0f3a5f] transition-colors inline-flex items-center gap-2 shadow-lg text-sm sm:text-base"
+                className="bg-[#1a4d72] text-white px-4 sm:px-6 lg:px-8 py-2 sm:py-3 lg:py-4 rounded-lg font-semibold hover:bg-[#0f3a5f] transition-colors inline-flex items-center gap-2 shadow-lg text-xs sm:text-sm lg:text-base min-w-fit"
               >
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="sm:w-5 sm:h-5 flex-shrink-0">
                   <path d="M15 3h6v6"></path>
                   <path d="M10 14 21 3"></path>
                   <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
@@ -69,7 +69,7 @@ const MainContent = ({ currentView, selectedRecord, onRecordSelect, onBackToList
   };
 
   return (
-    <div className={`w-full ${currentView !== 'dashboard' ? 'h-full' : ''}`}>
+    <div className={`w-full min-h-full ${currentView !== 'dashboard' ? 'h-full' : ''}`}>
       {renderContent()}
     </div>
   );

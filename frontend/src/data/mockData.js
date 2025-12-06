@@ -7,7 +7,7 @@ export const personalInfo = {
   phone: "+919347130705",
   linkedin: "https://linkedin.com/in/vaibhav-kedarisetti",
   github: "https://github.com/M10O",
-  resumeLink: "https://drive.google.com/file/d/1igQhbJjHA71iKMqKzpW3ZbyWhA8UG2Iq/view?usp=sharing",
+  resumeLink: "https://drive.google.com/file/d/1wNOuL9khx1mL5JftfdiTd_PeCVFWgR7H/view?usp=sharing",
   profileImage: `${process.env.PUBLIC_URL}/vaibhav-profile.png`,
   summary: "ServiceNow Developer with hands-on experience across ITSM, HRSD, and CSM modules. 5x certified (CAD, CSA, CIS-CSM, CIS-ITSM, CIS-HRSD) with expertise in scripting, integrations, and GenAI use cases. Skilled in building custom applications, workflows, and AI-powered solutions that enhance customer service operations and demo experiences."
 };
@@ -15,11 +15,26 @@ export const personalInfo = {
 export const experience = [
   {
     id: "EXP001",
+    company: "Work4Flow",
+    role: "Software Engineer",
+    location: "Remote",
+    period: "Oct 2025 – Present",
+    status: "Active",
+    details: [
+      "Currently developing an advanced ServiceNow application named Confidential until released, a successor to the Now Assist Readiness Evaluation (NARE) app, which was acquired by ServiceNow and published on the ServiceNow Store.",
+      "Designed and implemented over nine dynamic page variants using UI Builder, incorporating metrics, client state parameters, and data broker scripts for enhanced interactivity and performance for the application.",
+      "Developed multiple Script Includes to retrieve real-time data from the instance backend and render it seamlessly on client-side interfaces.",
+      "Configured and managed Scheduled Jobs to execute Script Includes automatically every day at 9 AM PST or as per client-specific requirements.",
+      "Built a comprehensive Guided Setup experience to help users easily understand and configure the application post-installation."
+    ]
+  },
+  {
+    id: "EXP002",
     company: "HCL Tech",
     role: "Graduate Engineer Trainee - ServiceNow",
     location: "Chennai, India",
     period: "Oct 2024 – Aug 2025",
-    status: "Active",
+    status: "Completed",
     details: [
       "Actively engaged in both testing and development tasks within the PayPal project, ensuring timely and efficient delivery of features and functionality.",
       "Conducted walkthroughs of ServiceNow customizations and AI integrations to client teams, simplifying technical concepts for non-technical stakeholders.",
@@ -37,7 +52,7 @@ export const experience = [
     ]
   },
   {
-    id: "EXP002",
+    id: "EXP003",
     company: "LI-Mat Soft Solutions",
     role: "Software Developer Intern",
     location: "Bangalore, India",
@@ -51,7 +66,7 @@ export const experience = [
     ]
   },
   {
-    id: "EXP003",
+    id: "EXP004",
     company: "Benciti Technologies",
     role: "SDE Intern",
     location: "Hyderabad, India",
@@ -68,6 +83,24 @@ export const experience = [
 export const projects = [
   {
     id: "PROJ001",
+    name: "Voice-to-Action Assistant – Built with ServiceNow Build Agent",
+    description: "Built entirely with ServiceNow Build Agent - a Voice-to-Action Assistant that lets Workspace users create, update, search, and manage incidents using just their voice commands.",
+    details: [
+      "Created a complete scoped application using only natural language prompts in ServiceNow IDE - Build Agent generated all code, flows, tables, and UI components.",
+      "Built a Build Agent Skill with intents like create_incident, update_ticket, search_tickets with slot filling, confirmations, and entity extraction.",
+      "Developed 6 Flow Designer flows for create, update, search, comment, status updates, and list tasks operations.",
+      "Implemented a Workspace floating voice widget with speech-to-text and smart UI for hands-free incident management.",
+      "Created logging & audit table (u_voice_actions) for all interactions with role-based access (u_voice_agent / u_voice_agent_admin).",
+      "Enabled automatic work notes for every action and natural language understanding for voice commands like 'Create an incident for email not working' or 'Assign INC0023456 to the Network Team'.",
+      "Zero external API keys required - everything runs natively inside ServiceNow using agentic AI, eliminating navigation friction for L1 teams."
+    ],
+    technologies: ["ServiceNow Build Agent", "Now Assist", "Agentic AI", "App Engine", "Workspace", "Flow Designer", "Build Agent Skills"],
+    link: "#",
+    status: "Completed",
+    favorite: true
+  },
+  {
+    id: "PROJ002",
     name: "Claude + ServiceNow Integration (via MCP)",
     description: "Integrated Claude AI (Anthropic LLM) with ServiceNow using Model Context Protocol (MCP) for natural language-driven actions.",
     details: [
@@ -79,7 +112,7 @@ export const projects = [
     status: "Completed"
   },
   {
-    id: "PROJ002", 
+    id: "PROJ003", 
     name: "ServiceNow Quick Launch Chrome Extension",
     description: "Built a Chrome extension for quick navigation across ServiceNow tables.",
     details: [
@@ -92,7 +125,7 @@ export const projects = [
     favorite: false
   },
   {
-    id: "PROJ003",
+    id: "PROJ004",
     name: "Gemini AI Chat Integration in Service Portal",
     description: "Designed and developed a full-stack chat application within ServiceNow Service Portal, replicating core features of the Gemini AI website.",
     details: [
@@ -106,7 +139,7 @@ export const projects = [
     favorite: false
   },
   {
-    id: "PROJ004",
+    id: "PROJ005",
     name: "GenAI Summarization Tool using Now Assist Skill Kit", 
     description: "Built a GenAI skill to summarize incidents and change request records using Now Assist Skill Kit.",
     details: [
@@ -196,6 +229,41 @@ export const certifications = [
   {
     id: "CERT008",
     name: "Micro-Certification – Configure the CMDB",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
+    status: "Completed"
+  },
+  {
+    id: "CERT009",
+    name: "Micro-Certification – Welcome to ServiceNow",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
+    status: "Completed"
+  },
+  {
+    id: "CERT010",
+    name: "Micro-Certification – Platform Analytics",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
+    status: "Completed"
+  },
+  {
+    id: "CERT011",
+    name: "Micro-Certification – Predictive Intelligence",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
+    status: "Completed"
+  },
+  {
+    id: "CERT012",
+    name: "Micro-Certification – Virtual Agent",
+    issuer: "ServiceNow",
+    category: "Micro-Certification",
+    status: "Completed"
+  },
+  {
+    id: "CERT013",
+    name: "Now Assist Executive Micro Cert",
     issuer: "ServiceNow",
     category: "Micro-Certification",
     status: "Completed"

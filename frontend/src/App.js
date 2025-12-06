@@ -73,9 +73,9 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="App w-full min-h-screen min-w-[320px]">
       <ServiceNowBackground>
-        <div className="flex flex-col h-screen">
+        <div className="flex flex-col min-h-screen w-full min-w-[320px]">
           {/* Header */}
           <ServiceNowHeader
             onSearchCommand={handleSearchCommand}
@@ -85,7 +85,7 @@ function App() {
           />
 
           {/* Main Layout */}
-          <div className="flex flex-1 overflow-hidden relative">
+          <div className="flex flex-1 overflow-hidden relative min-h-0">
             {/* Sidebar */}
             <ServiceNowSidebar
               isOpen={sidebarOpen}
@@ -93,7 +93,7 @@ function App() {
             />
 
             {/* Main Content - Make it scrollable */}
-            <div className={`flex-1 transition-all duration-300 ease-in-out ${currentView === 'dashboard' ? 'overflow-hidden' : 'overflow-y-auto'} ${sidebarOpen && currentView !== 'dashboard' ? 'lg:ml-64' : 'lg:ml-0'}`}>
+            <div className={`flex-1 transition-all duration-300 ease-in-out overflow-y-auto min-h-0 ${sidebarOpen && currentView !== 'dashboard' ? 'lg:ml-64' : 'lg:ml-0'}`}>
               <MainContent
                 currentView={currentView}
                 selectedRecord={selectedRecord}
@@ -106,16 +106,16 @@ function App() {
 
         {/* Floating Action Button for Virtual Agent */}
         {!virtualAgentOpen && (
-          <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2">
-            <div className="bg-white text-gray-800 text-xs font-semibold px-3 py-1 rounded-full shadow-lg animate-pulse">
+          <div className="fixed bottom-4 right-4 z-50 flex items-center gap-2 pointer-events-auto min-w-fit">
+            <div className="bg-white text-gray-800 text-xs font-semibold px-2 sm:px-3 py-1 rounded-full shadow-lg animate-pulse whitespace-nowrap flex-shrink-0">
               Click me!
             </div>
             <button
               onClick={() => setVirtualAgentOpen(true)}
-              className="bg-[#1a4d72] text-white p-4 rounded-full shadow-lg hover:bg-[#0f3a5f] transition-colors"
+              className="bg-[#1a4d72] text-white p-3 sm:p-4 rounded-full shadow-lg hover:bg-[#0f3a5f] transition-colors flex-shrink-0"
               title="Open Virtual Agent"
             >
-              <Bot className="w-6 h-6" />
+              <Bot className="w-5 h-5 sm:w-6 sm:h-6" />
             </button>
           </div>
         )}
