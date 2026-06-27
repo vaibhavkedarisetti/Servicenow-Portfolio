@@ -15,13 +15,33 @@ export const personalInfo = {
 export const experience = [
   {
     id: "EXP001",
+    company: "Deloitte Consulting, USI",
+    role: "Analyst",
+    location: "Hyderabad, India",
+    period: "Jan 2026 – Present",
+    status: "Active",
+    details: [
+      "Currently contributing to the 3rd project by providing support for ServiceNow–Workday Integration.",
+      "Contributing to Deloitte's firm initiative WeaveX, focused on developing intelligent AI Agents to automate enterprise workflows and enhance user productivity using ServiceNow's AI capabilities.",
+      "Currently working on multiple ServiceNow projects across ITSM and HRSD modules, including enhancement and end-to-end implementation engagements for enterprise clients.",
+      "In the 1st enhancement project, worked extensively on the ITSM module by configuring and enhancing Flow Designer, Workflow Editor, and Service Catalog Items to streamline business processes and improve operational efficiency.",
+      "Collaborated closely with client stakeholders and cross-functional teams during the Wolfspeed project to gather enhancement requirements, provide production support, and ensure smooth delivery of ServiceNow solutions.",
+      "Actively resolved client-raised defects, incidents, and enhancement tasks by performing root cause analysis and ensuring timely resolution aligned with SLA expectations.",
+      "In the 2nd implementation project, currently involved in implementing the Employee Relations module from scratch within the HRSD platform, including HR Services configuration, case management workflows, and process automation using Flow Designer.",
+      "Worked on designing scalable HR solutions and improving employee experience by automating HR operations and streamlining employee case handling processes.",
+      "Contributed to Deloitte's Firm Initiative FastForward - FF2 for Knowledge 26, focused on building an employee onboarding portal using the HRSD module and Moveworks Bot integration.",
+      "Enhanced the employee portal experience by replacing Virtual Agent with Moveworks Bot and managing knowledge articles related to company policies, leave management, onboarding, and employee wellbeing."
+    ]
+  },
+  {
+    id: "EXP002",
     company: "Work4Flow",
     role: "Software Engineer",
     location: "Remote",
-    period: "Oct 2025 – Present",
-    status: "Active",
+    period: "Oct 2025 – Dec 2025",
+    status: "Completed",
     details: [
-      "Currently developing an advanced ServiceNow application named Confidential until released, a successor to the Now Assist Readiness Evaluation (NARE) app, which was acquired by ServiceNow and published on the ServiceNow Store.",
+      "Developed an advanced ServiceNow application named Confidential until released, a successor to the Now Assist Readiness Evaluation (NARE) app, which was acquired by ServiceNow and published on the ServiceNow Store.",
       "Designed and implemented over nine dynamic page variants using UI Builder, incorporating metrics, client state parameters, and data broker scripts for enhanced interactivity and performance for the application.",
       "Developed multiple Script Includes to retrieve real-time data from the instance backend and render it seamlessly on client-side interfaces.",
       "Configured and managed Scheduled Jobs to execute Script Includes automatically every day at 9 AM PST or as per client-specific requirements.",
@@ -29,7 +49,7 @@ export const experience = [
     ]
   },
   {
-    id: "EXP002",
+    id: "EXP003",
     company: "HCL Tech",
     role: "Graduate Engineer Trainee - ServiceNow",
     location: "Chennai, India",
@@ -52,7 +72,7 @@ export const experience = [
     ]
   },
   {
-    id: "EXP003",
+    id: "EXP004",
     company: "LI-Mat Soft Solutions",
     role: "Software Developer Intern",
     location: "Bangalore, India",
@@ -66,7 +86,7 @@ export const experience = [
     ]
   },
   {
-    id: "EXP004",
+    id: "EXP005",
     company: "Benciti Technologies",
     role: "SDE Intern",
     location: "Hyderabad, India",
